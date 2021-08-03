@@ -13,6 +13,12 @@ class ViewController: UITableViewController {
     var gifts: Results<Gift>!
     var coin = 0
     
+    var priceArray = [Int]()
+    var sum = 0
+    var indexArray = [Int]()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +50,12 @@ class ViewController: UITableViewController {
             } else {
                 cell.accessoryType = .none
             }
+        
+        if indexArray.contains(indexPath.row) {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
             return cell
         }
     
@@ -64,15 +76,31 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let cell = self.tableView.cellForRow(at: indexPath)
             cell?.accessoryType = .checkmark
-            
-        let gift = gifts[indexPath.row]
-            coin = coin + Int(gift.price)!
-        if coin > 100 {
-            cell?.accessoryType = .none
-        } else {
-            self.navigationItem.title = "\(coin)/100"
 
-        }
+            let gift = gifts[indexPath.row]
+        
+            coin = coin + Int(gift.price)!
+
+            priceArray.append(Int(gift.price)!)
+            print(priceArray)
+            indexArray.append(indexPath.row)
+            print(indexArray)
+            sum = priceArray.reduce(0, +)
+            self.navigationItem.title = "\(sum)/100"
+        
+            if sum > 100 {
+                
+                while sum > 100 {
+                    priceArray.removeFirst()
+                    print(priceArray)
+                    sum = priceArray.reduce(0, +)
+                    tableView.reloadData()
+                    indexArray.removeFirst()
+                    print(indexArray)
+                    self.navigationItem.title = "\(sum)/100"
+
+                }
+            }
         }
         
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -80,8 +108,14 @@ class ViewController: UITableViewController {
             cell?.accessoryType = .none
         
         let gift = gifts[indexPath.row]
+        
+        
+        
             coin = coin - Int(gift.price)!
         self.navigationItem.title = "\(coin)/100"
+        
+        
+        
         }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {

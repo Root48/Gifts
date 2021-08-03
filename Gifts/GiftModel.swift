@@ -12,8 +12,6 @@ class Gift: Object {
     @objc dynamic var name = ""
     @objc dynamic var price = ""
     
-//    let giftsName = ["Bike", "Phone", "Ball", "Book", "Laptop"]
-//    let giftPrise = [25, 10, 2, 3, 15]
     convenience init(name: String, price: String) {
         self.init()
         self.name = name

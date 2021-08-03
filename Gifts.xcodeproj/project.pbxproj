@@ -18,6 +18,7 @@
 		847BF7CA26B55C7200680EFD /* GiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BF7C926B55C7200680EFD /* GiftModel.swift */; };
 		847BF7D026B572C200680EFD /* NewGiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BF7CF26B572C200680EFD /* NewGiftViewController.swift */; };
 		847BF7EC26B5AE5100680EFD /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BF7EB26B5AE5100680EFD /* StorageManager.swift */; };
+		847BF7EF26B80E5700680EFD /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 847BF7EE26B80E5700680EFD /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		847BF7C926B55C7200680EFD /* GiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftModel.swift; sourceTree = "<group>"; };
 		847BF7CF26B572C200680EFD /* NewGiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGiftViewController.swift; sourceTree = "<group>"; };
 		847BF7EB26B5AE5100680EFD /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		847BF7EE26B80E5700680EFD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A4C24B01EBDF8448D2AE14C9 /* Pods-Gifts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifts.release.xcconfig"; path = "Target Support Files/Pods-Gifts/Pods-Gifts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 		847BF7A426B536EC00680EFD = {
 			isa = PBXGroup;
 			children = (
+				847BF7EE26B80E5700680EFD /* .gitignore */,
 				847BF7AF26B536ED00680EFD /* Gifts */,
 				847BF7AE26B536ED00680EFD /* Products */,
 				9429DD28FE495168D17725A8 /* Pods */,
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847BF7EF26B80E5700680EFD /* .gitignore in Resources */,
 				847BF7BD26B536F100680EFD /* LaunchScreen.storyboard in Resources */,
 				847BF7BA26B536F100680EFD /* Assets.xcassets in Resources */,
 				847BF7B826B536ED00680EFD /* Main.storyboard in Resources */,
